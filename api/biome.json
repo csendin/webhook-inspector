@@ -1,43 +1,11 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
-	"linter": {
-		"rules": {
-			"recommended": true,
-			"correctness": {
+	"root": false,
+    "extends": "//",
+    "linter": {
+        "rules": {
+            "correctness": {
 				"noUnusedImports": "error"
 			}
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"lineWidth": 120,
-			"indentStyle": "space",
-			"indentWidth": 4,
-			"quoteStyle": "single",
-			"trailingCommas": "es5",
-			"semicolons": "asNeeded",
-			"arrowParentheses": "always"
-		}
-	},
-	"assist": {
-		"enabled": true,
-		"actions": {
-			"source": {
-				"organizeImports": {
-					"level": "on",
-					"options": {
-						"groups": [
-							[":NODE:"],
-							":BLANK_LINE:",
-							[":PACKAGE:"],
-							":BLANK_LINE:",
-							[":ALIAS:"],
-							":BLANK_LINE:",
-							[":PATH:"]
-						]
-					}
-				}
-			}
-		}
-	}
+        }
+    }
 }
