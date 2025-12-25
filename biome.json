@@ -24,8 +24,6 @@
 					"level": "on",
 					"options": {
 						"groups": [
-							[":STYLE:"],
-							":BLANK_LINE:",
 							[":NODE:"],
 							":BLANK_LINE:",
 							[":PACKAGE:"],
