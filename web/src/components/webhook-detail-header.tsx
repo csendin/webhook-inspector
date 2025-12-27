@@ -1,22 +1,31 @@
 import { Badge } from './ui/badge'
 
-export function WebhookDetailHeader() {
+interface WebhookDetailHeaderProps {
+    method: string
+    path: string
+    ip: string
+    createdAt: Date
+}
+
+export function WebhookDetailHeader({ method, path, ip, createdAt }: WebhookDetailHeaderProps) {
     return (
         <div className="space-y-4 border-b border-zinc-700 p-6">
             <div className="flex items-center gap-3">
-                <Badge>POST</Badge>
-                <span className="text-lg font-medium text-zinc-300">/video/status</span>
+                <Badge>{method}</Badge>
+                <span className="text-lg font-medium text-zinc-300">{path}</span>
             </div>
 
             <div className="flex items-center gap-2">
-                <div className="flex items-center gap-1 text-sm text-zinc-400">
-                    <span>From IP</span>
-                    <span className="underline underline-offset-4">123.292.128.23</span>
+                <div className="flex items-center text-sm text-zinc-400">
+                    <span>
+                        From IP - <span className="underline underline-offset-4">{ip}</span>
+                    </span>
                 </div>
                 <span className="w-px h-4 bg-zinc-700" />
-                <div className="flex items-center gap-1 text-sm text-zinc-400">
-                    <span>at</span>
-                    <span>April 18th, 8pm</span>
+                <div className="flex items-center gap-2 text-sm text-zinc-400">
+                    <span>
+                        at - <span>{createdAt.toLocaleString('en-US')}</span>
+                    </span>
                 </div>
             </div>
         </div>

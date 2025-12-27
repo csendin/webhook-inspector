@@ -7,6 +7,7 @@
                 "noDangerouslySetInnerHtml": "off"
             },
             "correctness": {
+                "useExhaustiveDependencies": "off",
 				"noUnusedImports": "error"
 			}
         }
