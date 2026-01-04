@@ -9,7 +9,10 @@
             "correctness": {
                 "useExhaustiveDependencies": "off",
 				"noUnusedImports": "error"
-			}
+			},
+            "suspicious": {
+                "noSelfCompare": "off"
+            }
         }
     }
 }
